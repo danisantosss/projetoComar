@@ -9,7 +9,7 @@ const corsOptions = {
 };
 
 const app = express();
-const port = 21410;
+const port = 10254;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
