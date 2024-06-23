@@ -82,7 +82,7 @@ export const NewMovimentation = ({
 
     if (condicao) {
       let retorno = await axios.post(
-        `http://localhost:3000/projeto/${projetoAtual}/movimentacoes/`,
+        `https://projetocomar.onrender.com/projeto/${projetoAtual}/movimentacoes/`,
         newObj
       );
       setMovimentacao((prev) => [...prev, retorno.data])

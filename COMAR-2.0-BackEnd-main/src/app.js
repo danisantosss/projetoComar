@@ -4,12 +4,12 @@ import cors from "cors";
 import routerUsuario from "./router/routerUsuario.js";
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://projetocomar.onrender.com",
   optionsSuccessStatus: 200,
 };
 
 const app = express();
-const port = 3000;
+const port = 21410;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,5 +19,5 @@ app.use("/projeto", routerSistema);
 app.use("/usuario", routerUsuario);
 
 app.listen(port, () => {
-  console.log(`Server : http://localhost:${port}/projeto `);
+  console.log(`Server : https://projetocomar.onrender.com:${port}/projeto `);
 });

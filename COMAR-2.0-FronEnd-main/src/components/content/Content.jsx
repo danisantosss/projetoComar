@@ -26,7 +26,7 @@ import axios from "axios";
 
 const pegarMovimentacoes = async (projeto) => {
   const res = await axios.get(
-    `http://localhost:3000/projeto/${projeto.id}/movimentacoes`
+    `https://projetocomar.onrender.com/projeto/${projeto.id}/movimentacoes`
   );
   return res.data;
 };

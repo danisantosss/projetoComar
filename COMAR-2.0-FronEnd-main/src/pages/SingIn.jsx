@@ -57,7 +57,7 @@ export default function SignIn({ setUsuario }) {
 
     try {
       let entrou = false;
-      const response = await axios.get("http://localhost:3000/usuario/");
+      const response = await axios.get("https://projetocomar.onrender.com/usuario/");
       for (const element of response.data) {
         const senhaValida = await bcrypt.compare(usuario.senha, element.senha);
         if (element.email === usuario.email && senhaValida) {

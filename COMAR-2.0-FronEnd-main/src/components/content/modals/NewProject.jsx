@@ -50,7 +50,7 @@ export const NewProject = ({ open, handleClose, projetos, setProjetos, setProjet
     
     // Verificação de input
     if (nomeProjeto.length > 2 && nomeProjeto.length < 20 && nomeProjeto != "") {
-      let retorno = await axios.post(`http://localhost:3000/projeto/`, { nome: nomeProjeto });
+      let retorno = await axios.post(`https://projetocomar.onrender.com/projeto/`, { nome: nomeProjeto });
       setProjetos((prev) => [...prev, retorno.data])
       setProjetoAtual(retorno.data.id)
       successMessage('Novo projeto adicionado')

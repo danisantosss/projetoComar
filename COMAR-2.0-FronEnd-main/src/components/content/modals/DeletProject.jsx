@@ -26,7 +26,7 @@ export const DeletProject = ({
 
   const deletarProjeto = async (ev) => {
     ev.preventDefault();
-    await axios.delete(`http://localhost:3000/projeto/${projetoID}`);
+    await axios.delete(`https://projetocomar.onrender.com/projeto/${projetoID}`);
     const newProjetosArray = projetos.filter(
       (element) => element.id != projetoID
     );

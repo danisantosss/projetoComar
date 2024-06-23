@@ -108,7 +108,7 @@ export const DataTable = ({ projeto, movimentacao, setMovimentacao, isLoading })
       movimentacao.map(async (element) => {
         if(element.id == id){
           let dataFormatada = moment(element.dataMovimento).format('YYYY-MM-DD')
-          await axios.put(`http://localhost:3000/projeto/${element.projetoId}/movimentacoes/${element.id}`,{"valor":updatedRow.valor,'dataMovimento':dataFormatada,'notaFiscal':updatedRow.notaFiscal,'fornecedor':updatedRow.fornecedor,'documento':updatedRow.documento,'historico':updatedRow.historico,'isEntrada':element.isEntrada})
+          await axios.put(`https://projetocomar.onrender.com/projeto/${element.projetoId}/movimentacoes/${element.id}`,{"valor":updatedRow.valor,'dataMovimento':dataFormatada,'notaFiscal':updatedRow.notaFiscal,'fornecedor':updatedRow.fornecedor,'documento':updatedRow.documento,'historico':updatedRow.historico,'isEntrada':element.isEntrada})
           successMessage('valor atualizado')
         }
       })
@@ -169,7 +169,7 @@ export const DataTable = ({ projeto, movimentacao, setMovimentacao, isLoading })
   const deletarMovimentacao = useCallback(
     (id) => async () => {
       await axios.delete(
-        `http://localhost:3000/projeto/${projeto.id}/movimentacoes/${id}`
+        `https://projetocomar.onrender.com/projeto/${projeto.id}/movimentacoes/${id}`
       );
       setTimeout(() => {
         setTableData((prevData) => prevData.filter((data) => data.id !== id));

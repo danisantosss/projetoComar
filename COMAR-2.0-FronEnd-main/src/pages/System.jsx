@@ -9,7 +9,7 @@ import SignIn from "./SingIn";
 import { Navigate, useNavigate } from "react-router-dom";
 
 //Default URL
-const API = "http://localhost:3000/";
+const API = "https://projetocomar.onrender.com/";
 //EndPoint Projetos
 const EPPROJETOS = `${API}projeto`;
 //EndPoint Usuarios
@@ -42,7 +42,7 @@ function System({ usuario, setUsuario }) {
 
     const fetchData = async (auth) => {
       let response = await axios.get(
-        `http://localhost:3000/usuario/${auth.id}`
+        `https://projetocomar.onrender.com/usuario/${auth.id}`
       );
       if (
         response.data == null ||
