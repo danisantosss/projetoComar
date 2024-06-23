@@ -2,6 +2,7 @@
     "name": "projetocomar",
     "version": "1.0.0",
     "scripts": {
+        "build": "cd COMAR-2.0-FronEnd-main && npm run build",
         "start:front": "cd COMAR-2.0-FronEnd-main && npm run dev",
         "start:back": "cd COMAR-2.0-BackEnd-main && npm run dev",
         "start": "concurrently \"npm run start:front\" \"npm run start:back\""
