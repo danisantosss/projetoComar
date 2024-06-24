@@ -8,6 +8,7 @@ const dbConfig = {
   //root
   user: process.env.USER_DB,
   password: process.env.PASSWORD,
+  connectTimeout: 60000,
 };
 
 const db = mysql.createConnection(dbConfig);
